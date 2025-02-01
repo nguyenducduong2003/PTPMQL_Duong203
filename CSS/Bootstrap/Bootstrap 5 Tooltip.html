@@ -10,13 +10,20 @@
 <body>
 
 <div class="container mt-3">
-  <h2>Basic List Group</h2>
-  <ul class="list-group">
-    <li class="list-group-item">First item</li>
-    <li class="list-group-item">Second item</li>
-    <li class="list-group-item">Third item</li>
-  </ul>
+  <h3>Tooltip Example</h3>
+  
+  <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" title="Hooray!">
+    Hover over me!
+  </button>
 </div>
+
+<script>
+// Initialize tooltips
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+</script>
 
 </body>
 </html>
