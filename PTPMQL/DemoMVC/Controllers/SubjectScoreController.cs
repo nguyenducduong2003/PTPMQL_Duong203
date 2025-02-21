@@ -25,7 +25,7 @@ namespace DemoMVC.Controllers
 
         private float GetFinalScore(float scoreA, float scoreB, float scoreC)
         {
-            return (scoreA + scoreB + scoreC) / 3;
+            return (scoreA*0.6f) + (scoreB*0.3f) + (scoreC*0.1f);
         }
     }
 }
