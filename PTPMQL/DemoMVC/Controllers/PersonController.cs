@@ -1,5 +1,9 @@
-using System.ComponentModel.DataAnnotations;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DemoMVC.Data;
 using DemoMVC.Models;
@@ -15,20 +19,42 @@ namespace DemoMVC.Controllers
             _context = context;
         }
 
+        // GET: Person
         public async Task<IActionResult> Index()
         {
-            var model = await _context.Persons.ToListAsync();
-            return View(model);
+            return View(await _context.Person.ToListAsync());
         }
 
+        // GET: Person/Details/5
+        public async Task<IActionResult> Details(string id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var person = await _context.Person
+                .FirstOrDefaultAsync(m => m.PersonId == id);
+            if (person == null)
+            {
+                return NotFound();
+            }
+
+            return View(person);
+        }
+
+        // GET: Person/Create
         public IActionResult Create()
         {
             return View();
         }
 
+        // POST: Person/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PersonId,FullName,Address,PhoneNumber")] Person person)
+        public async Task<IActionResult> Create([Bind("PersonId,FullName,Address,Phone")] Person person)
         {
             if (ModelState.IsValid)
             {
@@ -39,14 +65,15 @@ namespace DemoMVC.Controllers
             return View(person);
         }
 
+        // GET: Person/Edit/5
         public async Task<IActionResult> Edit(string id)
         {
-            if (id == null || _context.Persons == null)
+            if (id == null)
             {
                 return NotFound();
             }
 
-            var person = await _context.Persons.FindAsync(id);
+            var person = await _context.Person.FindAsync(id);
             if (person == null)
             {
                 return NotFound();
@@ -54,9 +81,12 @@ namespace DemoMVC.Controllers
             return View(person);
         }
 
+        // POST: Person/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("PersonId,FullName,Address,PhoneNumber")] Person person)
+        public async Task<IActionResult> Edit(string id, [Bind("PersonId,FullName,Address,Phone")] Person person)
         {
             if (id != person.PersonId)
             {
@@ -86,14 +116,15 @@ namespace DemoMVC.Controllers
             return View(person);
         }
 
+        // GET: Person/Delete/5
         public async Task<IActionResult> Delete(string id)
         {
-            if (id == null || _context.Persons == null)
+            if (id == null)
             {
                 return NotFound();
             }
 
-            var person = await _context.Persons
+            var person = await _context.Person
                 .FirstOrDefaultAsync(m => m.PersonId == id);
             if (person == null)
             {
@@ -103,26 +134,24 @@ namespace DemoMVC.Controllers
             return View(person);
         }
 
+        // POST: Person/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            if (_context.Persons == null)
-            {
-                return Problem("Entity set 'ApplicationDbContext.Persons' is null.");
-            }
-            var person = await _context.Persons.FindAsync(id);
+            var person = await _context.Person.FindAsync(id);
             if (person != null)
             {
-                _context.Persons.Remove(person);
-                await _context.SaveChangesAsync();
+                _context.Person.Remove(person);
             }
+
+            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool PersonExists(string id)
         {
-            return (_context.Persons?.Any(e => e.PersonId == id)).GetValueOrDefault();
+            return _context.Person.Any(e => e.PersonId == id);
         }
     }
 }

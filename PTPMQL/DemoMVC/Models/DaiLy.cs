@@ -15,6 +15,10 @@ namespace DemoMVC.Models
         public string DienThoai { get; set; }
         public string MaHTPP { get; set; }
         public HeThongPhanPhoi HeThongPhanPhoi{ get; set; }
+
+        public DaiLy()
+        {
+        }
         public DaiLy(string maDaiLy, string tenDaiLy, string diaChi, string nguoiDaiDien, string dienThoai, string maHTPP)
         {
             MaDaiLy = maDaiLy;
@@ -25,5 +29,7 @@ namespace DemoMVC.Models
             MaHTPP = maHTPP;
 
         }
+
+        
     }
 }
