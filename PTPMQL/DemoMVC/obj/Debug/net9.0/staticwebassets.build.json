@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2z9zlzXutLNgVK9NUxJ7Q5kOEcQj76G347J6MaqcTnw=",
+  "Hash": "Lqb/Vstg6i7oDmaX2R0xdmSvaynezexxnSv0HF+vRLc=",
   "Source": "DemoMVC",
   "BasePath": "_content/DemoMVC",
   "Mode": "Default",
@@ -309,6 +309,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\PTPMQL_N04\\PTPMQL\\DemoMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Identity": "C:\\PTPMQL_N04\\PTPMQL\\DemoMVC\\obj\\Debug\\net9.0\\compressed\\8zbt1ept7g-ni8sbnxzuf.gz",
+      "SourceId": "DemoMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\PTPMQL_N04\\PTPMQL\\DemoMVC\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/DemoMVC",
+      "RelativePath": "Debug#[.{fingerprint=ni8sbnxzuf}]?.txt.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\PTPMQL_N04\\PTPMQL\\DemoMVC\\wwwroot\\Debug.txt",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "s7kad1fkkc",
+      "Integrity": "2EXiJnpFeEsFxg7E1AShksTW3QI3TVW1Ob+N9z2TgNc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\PTPMQL_N04\\PTPMQL\\DemoMVC\\wwwroot\\Debug.txt"
     },
     {
       "Identity": "C:\\PTPMQL_N04\\PTPMQL\\DemoMVC\\obj\\Debug\\net9.0\\compressed\\97588qt2nk-ausgxo2sd3.gz",
@@ -1422,6 +1443,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\PTPMQL_N04\\PTPMQL\\DemoMVC\\wwwroot\\Debug.txt",
+      "SourceId": "DemoMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\PTPMQL_N04\\PTPMQL\\DemoMVC\\wwwroot\\",
+      "BasePath": "_content/DemoMVC",
+      "RelativePath": "Debug#[.{fingerprint}]?.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ni8sbnxzuf",
+      "Integrity": "4W7PfByrvuz6Ard23zwk+toSD2Cm9keQDy+XVFb1+wM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Debug.txt"
     },
     {
       "Identity": "C:\\PTPMQL_N04\\PTPMQL\\DemoMVC\\wwwroot\\favicon.ico",
@@ -3022,6 +3064,304 @@
         {
           "Name": "integrity",
           "Value": "sha256-0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y="
+        }
+      ]
+    },
+    {
+      "Route": "Debug.ni8sbnxzuf.txt",
+      "AssetFile": "C:\\PTPMQL_N04\\PTPMQL\\DemoMVC\\obj\\Debug\\net9.0\\compressed\\8zbt1ept7g-ni8sbnxzuf.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002695417790"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "370"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2EXiJnpFeEsFxg7E1AShksTW3QI3TVW1Ob+N9z2TgNc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Mar 2025 10:09:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"4W7PfByrvuz6Ard23zwk+toSD2Cm9keQDy+XVFb1+wM=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ni8sbnxzuf"
+        },
+        {
+          "Name": "label",
+          "Value": "Debug.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4W7PfByrvuz6Ard23zwk+toSD2Cm9keQDy+XVFb1+wM="
+        }
+      ]
+    },
+    {
+      "Route": "Debug.ni8sbnxzuf.txt",
+      "AssetFile": "C:\\PTPMQL_N04\\PTPMQL\\DemoMVC\\wwwroot\\Debug.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "756"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4W7PfByrvuz6Ard23zwk+toSD2Cm9keQDy+XVFb1+wM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Mar 2025 10:09:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ni8sbnxzuf"
+        },
+        {
+          "Name": "label",
+          "Value": "Debug.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4W7PfByrvuz6Ard23zwk+toSD2Cm9keQDy+XVFb1+wM="
+        }
+      ]
+    },
+    {
+      "Route": "Debug.ni8sbnxzuf.txt.gz",
+      "AssetFile": "C:\\PTPMQL_N04\\PTPMQL\\DemoMVC\\obj\\Debug\\net9.0\\compressed\\8zbt1ept7g-ni8sbnxzuf.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "370"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2EXiJnpFeEsFxg7E1AShksTW3QI3TVW1Ob+N9z2TgNc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Mar 2025 10:09:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ni8sbnxzuf"
+        },
+        {
+          "Name": "label",
+          "Value": "Debug.txt.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2EXiJnpFeEsFxg7E1AShksTW3QI3TVW1Ob+N9z2TgNc="
+        }
+      ]
+    },
+    {
+      "Route": "Debug.txt",
+      "AssetFile": "C:\\PTPMQL_N04\\PTPMQL\\DemoMVC\\obj\\Debug\\net9.0\\compressed\\8zbt1ept7g-ni8sbnxzuf.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002695417790"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "370"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2EXiJnpFeEsFxg7E1AShksTW3QI3TVW1Ob+N9z2TgNc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Mar 2025 10:09:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"4W7PfByrvuz6Ard23zwk+toSD2Cm9keQDy+XVFb1+wM=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4W7PfByrvuz6Ard23zwk+toSD2Cm9keQDy+XVFb1+wM="
+        }
+      ]
+    },
+    {
+      "Route": "Debug.txt",
+      "AssetFile": "C:\\PTPMQL_N04\\PTPMQL\\DemoMVC\\wwwroot\\Debug.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "756"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4W7PfByrvuz6Ard23zwk+toSD2Cm9keQDy+XVFb1+wM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Mar 2025 10:09:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4W7PfByrvuz6Ard23zwk+toSD2Cm9keQDy+XVFb1+wM="
+        }
+      ]
+    },
+    {
+      "Route": "Debug.txt.gz",
+      "AssetFile": "C:\\PTPMQL_N04\\PTPMQL\\DemoMVC\\obj\\Debug\\net9.0\\compressed\\8zbt1ept7g-ni8sbnxzuf.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "370"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2EXiJnpFeEsFxg7E1AShksTW3QI3TVW1Ob+N9z2TgNc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Mar 2025 10:09:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2EXiJnpFeEsFxg7E1AShksTW3QI3TVW1Ob+N9z2TgNc="
         }
       ]
     },

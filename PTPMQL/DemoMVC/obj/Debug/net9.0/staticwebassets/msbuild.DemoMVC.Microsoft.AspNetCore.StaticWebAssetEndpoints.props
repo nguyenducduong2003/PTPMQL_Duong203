@@ -12,6 +12,18 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"667"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\u0022"},{"Name":"Last-Modified","Value":"Fri, 17 Jan 2025 15:29:54 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/DemoMVC/Debug.ni8sbnxzuf.txt">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Debug.txt'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ni8sbnxzuf"},{"Name":"integrity","Value":"sha256-4W7PfByrvuz6Ard23zwk\u002BtoSD2Cm9keQDy\u002BXVFb1\u002BwM="},{"Name":"label","Value":"_content/DemoMVC/Debug.txt"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"756"},{"Name":"Content-Type","Value":"text/plain"},{"Name":"ETag","Value":"\u00224W7PfByrvuz6Ard23zwk\u002BtoSD2Cm9keQDy\u002BXVFb1\u002BwM=\u0022"},{"Name":"Last-Modified","Value":"Fri, 21 Mar 2025 10:09:24 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/DemoMVC/Debug.txt">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Debug.txt'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-4W7PfByrvuz6Ard23zwk\u002BtoSD2Cm9keQDy\u002BXVFb1\u002BwM="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"756"},{"Name":"Content-Type","Value":"text/plain"},{"Name":"ETag","Value":"\u00224W7PfByrvuz6Ard23zwk\u002BtoSD2Cm9keQDy\u002BXVFb1\u002BwM=\u0022"},{"Name":"Last-Modified","Value":"Fri, 21 Mar 2025 10:09:24 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/DemoMVC/DemoMVC.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\DemoMVC.g2a2ihw8jb.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

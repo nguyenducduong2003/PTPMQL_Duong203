@@ -5,7 +5,7 @@
 namespace DemoMVC.Migrations
 {
     /// <inheritdoc />
-    public partial class Create_table_DaiLy : Migration
+    public partial class Create_table_Person : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -20,6 +20,23 @@ namespace DemoMVC.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_HeThongPhanPhois", x => x.MaHTPP);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Persons",
+                columns: table => new
+                {
+                    PersonId = table.Column<string>(type: "TEXT", nullable: false),
+                    FullName = table.Column<string>(type: "TEXT", nullable: false),
+                    Address = table.Column<string>(type: "TEXT", nullable: false),
+                    Phone = table.Column<string>(type: "TEXT", nullable: false),
+                    Discriminator = table.Column<string>(type: "TEXT", maxLength: 8, nullable: false),
+                    EmployeeId = table.Column<string>(type: "TEXT", nullable: true),
+                    Age = table.Column<int>(type: "INTEGER", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Persons", x => x.PersonId);
                 });
 
             migrationBuilder.CreateTable(
@@ -56,6 +73,9 @@ namespace DemoMVC.Migrations
         {
             migrationBuilder.DropTable(
                 name: "DaiLys");
+
+            migrationBuilder.DropTable(
+                name: "Persons");
 
             migrationBuilder.DropTable(
                 name: "HeThongPhanPhois");
