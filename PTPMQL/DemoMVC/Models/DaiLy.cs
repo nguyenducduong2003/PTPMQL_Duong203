@@ -1,35 +1,32 @@
+using System.Data.Common;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using DemoMVC.Models;
+using DemoMVC.Models; // Đảm bảo rằng bạn đã thêm namespace này nếu cần thiết
 
-namespace DemoMVC.Models
+namespace DemoMVC.Models;
+
+public class DaiLy
 {
-    [Table("DaiLys")]
-    public class DaiLy
-    {
-        [Key]
-        public string MaDaiLy { get; set; }
-        public string TenDaiLy { get; set; }
-        public string DiaChi { get; set; }
-        public string NguoiDaiDien { get; set; }
-        public string DienThoai { get; set; }
-        public string MaHTPP { get; set; }
-        public HeThongPhanPhoi HeThongPhanPhoi{ get; set; }
+    // Mã đại lý (Khóa chính)
+    [Key]
+    public string? MaDaiLy { get; set; }
 
-        public DaiLy()
-        {
-        }
-        public DaiLy(string maDaiLy, string tenDaiLy, string diaChi, string nguoiDaiDien, string dienThoai, string maHTPP)
-        {
-            MaDaiLy = maDaiLy;
-            TenDaiLy = tenDaiLy;
-            DiaChi = diaChi;
-            NguoiDaiDien = nguoiDaiDien;
-            DienThoai = dienThoai;
-            MaHTPP = maHTPP;
+    // Tên đại lý
+    public string? TenDaiLy { get; set; }
 
-        }
+    // Địa chỉ của đại lý
+    public string? DiaChi { get; set; }
 
-        
-    }
+    // Người đại diện của đại lý
+    public string? NguoiDaiDien { get; set; }
+
+    // Số điện thoại của đại lý
+    public string? DienThoai { get; set; }
+
+    // Mã hệ thống phân phối liên kết (Khóa ngoại)
+    [ForeignKey("HeThongPhanPhoi")]
+    public string? MaHTPP { get; set; }
+
+    // Tham chiếu đến đối tượng HeThongPhanPhoi (navigation property)
+    public HeThongPhanPhoi? HeThongPhanPhoi { get; set; }
 }

@@ -22,34 +22,25 @@ namespace DemoMVC.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("DiaChi")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("DienThoai")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("HeThongPhanPhoiMaHTPP")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("MaHTPP")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("NguoiDaiDien")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("TenDaiLy")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("MaDaiLy");
 
-                    b.HasIndex("HeThongPhanPhoiMaHTPP");
+                    b.HasIndex("MaHTPP");
 
-                    b.ToTable("DaiLys");
+                    b.ToTable("DaiLy");
                 });
 
             modelBuilder.Entity("DemoMVC.Models.HeThongPhanPhoi", b =>
@@ -58,12 +49,11 @@ namespace DemoMVC.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("TenHTPP")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("MaHTPP");
 
-                    b.ToTable("HeThongPhanPhois");
+                    b.ToTable("HeThongPhanPhoi");
                 });
 
             modelBuilder.Entity("DemoMVC.Models.Person", b =>
@@ -116,17 +106,15 @@ namespace DemoMVC.Migrations
             modelBuilder.Entity("DemoMVC.Models.DaiLy", b =>
                 {
                     b.HasOne("DemoMVC.Models.HeThongPhanPhoi", "HeThongPhanPhoi")
-                        .WithMany("Daily")
-                        .HasForeignKey("HeThongPhanPhoiMaHTPP")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .WithMany("DanhSachDaiLy")
+                        .HasForeignKey("MaHTPP");
 
                     b.Navigation("HeThongPhanPhoi");
                 });
 
             modelBuilder.Entity("DemoMVC.Models.HeThongPhanPhoi", b =>
                 {
-                    b.Navigation("Daily");
+                    b.Navigation("DanhSachDaiLy");
                 });
 #pragma warning restore 612, 618
         }

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DemoMVC.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250314163353_Create_table_HeThongPhanPhoi")]
+    [Migration("20250408161146_Create_table_HeThongPhanPhoi")]
     partial class Create_table_HeThongPhanPhoi
     {
         /// <inheritdoc />
@@ -25,34 +25,25 @@ namespace DemoMVC.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("DiaChi")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("DienThoai")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("HeThongPhanPhoiMaHTPP")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("MaHTPP")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("NguoiDaiDien")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("TenDaiLy")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("MaDaiLy");
 
-                    b.HasIndex("HeThongPhanPhoiMaHTPP");
+                    b.HasIndex("MaHTPP");
 
-                    b.ToTable("DaiLys");
+                    b.ToTable("DaiLy");
                 });
 
             modelBuilder.Entity("DemoMVC.Models.HeThongPhanPhoi", b =>
@@ -61,12 +52,11 @@ namespace DemoMVC.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("TenHTPP")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("MaHTPP");
 
-                    b.ToTable("HeThongPhanPhois");
+                    b.ToTable("HeThongPhanPhoi");
                 });
 
             modelBuilder.Entity("DemoMVC.Models.Person", b =>
@@ -119,17 +109,15 @@ namespace DemoMVC.Migrations
             modelBuilder.Entity("DemoMVC.Models.DaiLy", b =>
                 {
                     b.HasOne("DemoMVC.Models.HeThongPhanPhoi", "HeThongPhanPhoi")
-                        .WithMany("Daily")
-                        .HasForeignKey("HeThongPhanPhoiMaHTPP")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .WithMany("DanhSachDaiLy")
+                        .HasForeignKey("MaHTPP");
 
                     b.Navigation("HeThongPhanPhoi");
                 });
 
             modelBuilder.Entity("DemoMVC.Models.HeThongPhanPhoi", b =>
                 {
-                    b.Navigation("Daily");
+                    b.Navigation("DanhSachDaiLy");
                 });
 #pragma warning restore 612, 618
         }
