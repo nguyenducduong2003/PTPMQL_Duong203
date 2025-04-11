@@ -22,7 +22,8 @@ namespace DemoMVC.Controllers
         // GET: DaiLy
         public async Task<IActionResult> Index()
         {
-            return View(await _context.DaiLy.ToListAsync());
+            var applicationDbContext = _context.DaiLy.Include(d => d.HeThongPhanPhoi);
+            return View(await applicationDbContext.ToListAsync());
         }
 
         // GET: DaiLy/Details/5
@@ -34,6 +35,7 @@ namespace DemoMVC.Controllers
             }
 
             var daiLy = await _context.DaiLy
+                .Include(d => d.HeThongPhanPhoi)
                 .FirstOrDefaultAsync(m => m.MaDaiLy == id);
             if (daiLy == null)
             {
@@ -46,6 +48,7 @@ namespace DemoMVC.Controllers
         // GET: DaiLy/Create
         public IActionResult Create()
         {
+            ViewData["MaHTPP"] = new SelectList(_context.HeThongPhanPhoi, "MaHTPP", "MaHTPP");
             return View();
         }
 
@@ -62,6 +65,7 @@ namespace DemoMVC.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["MaHTPP"] = new SelectList(_context.HeThongPhanPhoi, "MaHTPP", "MaHTPP", daiLy.MaHTPP);
             return View(daiLy);
         }
 
@@ -78,6 +82,7 @@ namespace DemoMVC.Controllers
             {
                 return NotFound();
             }
+            ViewData["MaHTPP"] = new SelectList(_context.HeThongPhanPhoi, "MaHTPP", "MaHTPP", daiLy.MaHTPP);
             return View(daiLy);
         }
 
@@ -113,6 +118,7 @@ namespace DemoMVC.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["MaHTPP"] = new SelectList(_context.HeThongPhanPhoi, "MaHTPP", "MaHTPP", daiLy.MaHTPP);
             return View(daiLy);
         }
 
@@ -125,6 +131,7 @@ namespace DemoMVC.Controllers
             }
 
             var daiLy = await _context.DaiLy
+                .Include(d => d.HeThongPhanPhoi)
                 .FirstOrDefaultAsync(m => m.MaDaiLy == id);
             if (daiLy == null)
             {
